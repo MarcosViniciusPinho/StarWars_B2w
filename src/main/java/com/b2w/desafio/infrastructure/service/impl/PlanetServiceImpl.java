@@ -26,8 +26,12 @@ public class PlanetServiceImpl implements PlanetService {
         this.restTemplate = HttpSwapi.initialiaze();
     }
 
-    @Override
-    public List<Result> findAllPerPage(Long page) {
+    /**
+     * Método responsável por buscar todos os planetas na API https://swapi.co/api/planets
+     * @param page page responsavel pela busca por demanda.
+     * @return List<Result> classe que transforma as informações vindas da API para este objeto <code>Result</code>
+     */
+    private List<Result> call(Long page) {
         StringBuilder sb = new StringBuilder().append(this.property.getEnviroment())
                 .append("/planets?page=%d");
         Planet planet = this.restTemplate.getForObject(
@@ -43,7 +47,7 @@ public class PlanetServiceImpl implements PlanetService {
 
         do {
 
-            List<Result> results = this.findAllPerPage(cont);
+            List<Result> results = this.call(cont);
 
             if(CollectionUtils.isNotEmpty(results)) {
                 result = results.stream()
@@ -67,7 +71,7 @@ public class PlanetServiceImpl implements PlanetService {
 
         do {
 
-            List<Result> results = this.findAllPerPage(cont);
+            List<Result> results = this.call(cont);
 
             if(CollectionUtils.isNotEmpty(results)) {
                 resultsOther.addAll(results);

@@ -1,11 +1,11 @@
 package com.b2w.desafio.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -23,9 +23,8 @@ public class Planeta implements Serializable {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @NotBlank
     @Size(max = 50)
-    @Column(name = "nome", length = 50, nullable = false)
+    @Column(name = "nome", length = 50)
     private String nome;
 
     @Size(max = 100)
@@ -37,6 +36,7 @@ public class Planeta implements Serializable {
     private String terreno;
 
     @Transient
+    @JsonInclude(value = JsonInclude.Include.NON_NULL)
     private Integer totalDeAparicoesEmFilmes;
 
     public Planeta(String nome, String clima, String terreno) {

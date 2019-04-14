@@ -4,17 +4,16 @@ import com.b2w.desafio.domain.entity.Planeta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public interface PlanetaRepository extends JpaRepository<Planeta, Long> {
 
     /**
-     * Método para buscar um planeta a partir de seu nome
+     * Método que lista os planetas na base de dados, tendo parametros ou não.
      * @param nome nome
-     * @return Optional<Planeta>
+     * @return List<Planeta>
      */
-    Optional<Planeta> findByNome(String nome);
-
+    List<Planeta> findAllByNomeContaining(String nome);
 }
 

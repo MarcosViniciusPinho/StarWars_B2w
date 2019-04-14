@@ -31,20 +31,9 @@ public class PlanetaResource {
         Planeta planetaSalvo = this.service.save(planeta);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}")
-                .buildAndExpand(planetaSalvo.getNome()).toUri();
+                .buildAndExpand(planetaSalvo.getId()).toUri();
 
         return ResponseEntity.created(uri).body(planetaSalvo);
-    }
-
-    /**
-     * Método que exclui um planeta por seu id
-     * @param id id
-     * @return ResponseEntity<Void>
-     */
-    @DeleteMapping(value = "/{id}")
-    public ResponseEntity<Void> delete(@PathVariable(value = "id") Long id){
-        this.service.delete(id);
-        return ResponseEntity.noContent().build();
     }
 
     /**
@@ -52,8 +41,8 @@ public class PlanetaResource {
      * @return ResponseEntity<List<Planeta>>
      */
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Planeta>> findAll(){
-        return ResponseEntity.ok().body(this.service.findAll());
+    public ResponseEntity<List<Planeta>> findAll(@RequestParam(value = "nome", required = false) String nome){
+        return ResponseEntity.ok().body(this.service.findAll(nome));
     }
 
     /**
@@ -68,14 +57,14 @@ public class PlanetaResource {
     }
 
     /**
-     * Método que busca um planeta por seu nome
-     * @param  nome nome
-     * @return ResponseEntity<Planeta>
+     * Método que exclui um planeta por seu id
+     * @param id id
+     * @return ResponseEntity<Void>
      */
-    @GetMapping(value = "/nome/{nome}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Optional<Planeta>> findByNome(@PathVariable(value = "nome") String nome){
-        val planeta = this.service.findByNome(nome);
-        return ResponseEntity.ok(planeta);
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable(value = "id") Long id){
+        this.service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 }

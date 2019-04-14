@@ -22,9 +22,10 @@ public interface PlanetaService {
 
     /**
      * Listar todos os planetas
+     * @param nome nome
      * @return List<Planeta>
      */
-    List<Planeta> findAll();
+    List<Planeta> findAll(String nome);
 
     /**
      * Método usado para buscar um planeta a partir de seu id
@@ -33,10 +34,4 @@ public interface PlanetaService {
      */
     Optional<Planeta> findById(Long id);
 
-    /**
-     * Método usado para buscar um planeta a partir de seu nome
-     * @param nome nome
-     * @return Planeta
-     */
-    Optional<Planeta> findByNome(String nome);
 }

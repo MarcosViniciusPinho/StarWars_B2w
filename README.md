@@ -23,6 +23,6 @@ máquina local ou ter o mesmo configurado em sua IDE e digitar três comandos:
 - flyway:clean flyway:migrate
 - clean spring-boot:run
 <br />
-Obs: Antes de rodar estes dois comandos se certifique que a base de dados já
+Obs: Antes de rodar estes dois últimos comandos se certifique que a base de dados já
 foi criada.
 

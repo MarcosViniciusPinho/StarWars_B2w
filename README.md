@@ -15,7 +15,7 @@ Tecnologias utilizadas no projeto, foram as seguintes:<br />
 <br />
 
 Para testar os end-points da API, importar a collection localizada em 
-test/resources/Desafio - B2W.postman_collection.json para seu postman.<br />
+src/test/resources/Desafio - B2W.postman_collection.json para seu postman.<br />
 
 Para poder executar o projeto é obrigatório você ter o maven instalado em sua 
 máquina local ou ter o mesmo configurado em sua IDE e digitar dois comandos:

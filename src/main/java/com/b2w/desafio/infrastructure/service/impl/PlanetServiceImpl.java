@@ -27,7 +27,7 @@ public class PlanetServiceImpl implements PlanetService {
     }
 
     @Override
-    public List<Result> call(Long page) {
+    public List<Result> findAllPerPage(Long page) {
         StringBuilder sb = new StringBuilder().append(this.property.getEnviroment())
                 .append("/planets?page=%d");
         Planet planet = this.restTemplate.getForObject(
@@ -43,7 +43,7 @@ public class PlanetServiceImpl implements PlanetService {
 
         do {
 
-            List<Result> results = this.call(cont);
+            List<Result> results = this.findAllPerPage(cont);
 
             if(CollectionUtils.isNotEmpty(results)) {
                 result = results.stream()
@@ -58,6 +58,29 @@ public class PlanetServiceImpl implements PlanetService {
         } while(cont > 0);
 
         return result.isPresent() ? result.get().getFilms().size() : null;
+    }
+
+    @Override
+    public List<Result> findAll() {
+        Long cont = 1L;
+        List<Result> resultsOther = new ArrayList<>();
+
+        do {
+
+            List<Result> results = this.findAllPerPage(cont);
+
+            if(CollectionUtils.isNotEmpty(results)) {
+                resultsOther.addAll(results);
+                cont++;
+            }
+
+            if(results.size() < 10){
+                cont = 0L;
+            }
+
+        } while(cont > 0);
+
+        return resultsOther;
     }
 
 }

@@ -12,7 +12,7 @@ public interface PlanetService {
      * @param page page responsavel pela busca por demanda.
      * @return List<Result> classe que transforma as informações vindas da API para este objeto <code>Result</code>
      */
-    List<Result> call(Long page);
+    List<Result> findAllPerPage(Long page);
 
     /**
      * Método responsável por obter o total de filmes por planeta disponibilizados na API deste desafio.
@@ -21,5 +21,11 @@ public interface PlanetService {
      * na API deste desafio, caso contrário retorna null
      */
     Integer getTotalDeFilmesPorPlaneta(Planeta planeta);
+
+    /**
+     * Método responsável por listar todas os planetas da API deste desafio.
+     * @return List<Result>
+     */
+    List<Result> findAll();
 
 }

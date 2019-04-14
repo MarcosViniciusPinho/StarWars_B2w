@@ -1,9 +1,7 @@
 package com.b2w.desafio.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -12,7 +10,9 @@ import java.io.Serializable;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@EqualsAndHashCode
 @Table(name = "planeta")
 public class Planeta implements Serializable {
 

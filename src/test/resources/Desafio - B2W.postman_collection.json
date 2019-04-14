@@ -1,0 +1,209 @@
+{
+	"id": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+	"name": "Desafio - B2W",
+	"description": "",
+	"order": [
+		"29c77f28-0217-6273-355d-f4ea34e92432",
+		"9fe00ca0-c906-84c8-0db1-620908ee76a0",
+		"e5617352-708c-b291-cb32-fb5663505d53",
+		"b23dab8f-1d07-96cb-6441-de032bd8f530",
+		"05121379-a646-f825-ee07-d6c05305cf9d",
+		"9d1beadb-2f33-7ed0-8ca8-8fe654a85028"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1555248803428,
+	"owner": "1749718",
+	"public": false,
+	"requests": [
+		{
+			"id": "05121379-a646-f825-ee07-d6c05305cf9d",
+			"headers": "",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8081/desafio/api/planetas/6",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+			"data": null,
+			"dataMode": "params",
+			"name": "Excluir um planeta",
+			"description": "http://localhost:8081/desafio/api/planetas/6",
+			"descriptionFormat": "html",
+			"time": 1555248932936,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "29c77f28-0217-6273-355d-f4ea34e92432",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/desafio/api/planetas",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+			"data": null,
+			"dataMode": "params",
+			"name": "Listar planetas da base de dados",
+			"description": "http://localhost:8081/desafio/api/planetas",
+			"descriptionFormat": "html",
+			"time": 1555248840559,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9d1beadb-2f33-7ed0-8ca8-8fe654a85028",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/desafio/api/planets",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+			"data": null,
+			"dataMode": "params",
+			"name": "Listar planetas da https://swapi.co/",
+			"description": "http://localhost:8081/desafio/api/planets",
+			"descriptionFormat": "html",
+			"time": 1555248966383,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9fe00ca0-c906-84c8-0db1-620908ee76a0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/desafio/api/planetas/4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+			"data": null,
+			"dataMode": "params",
+			"name": "Buscar um planeta por id",
+			"description": "http://localhost:8081/desafio/api/planetas/4",
+			"descriptionFormat": "html",
+			"time": 1555248871862,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b23dab8f-1d07-96cb-6441-de032bd8f530",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/desafio/api/planetas/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Salvar um planeta",
+			"description": "http://localhost:8081/desafio/api/planetas/",
+			"descriptionFormat": "html",
+			"time": 1555248916880,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"nome\": \"Stewjon\",\n\t\"clima\": \"temperate\",\n\t\"terreno\": \"grass\"\n}"
+		},
+		{
+			"id": "e5617352-708c-b291-cb32-fb5663505d53",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/desafio/api/planetas?nome=leu",
+			"queryParams": [
+				{
+					"key": "nome",
+					"value": "leu",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3fd5652f-b428-d9fd-3aa9-ea37503d9b2d",
+			"data": null,
+			"dataMode": "params",
+			"name": "Buscar planetas pelo nome",
+			"description": "http://localhost:8081/desafio/api/planetas?nome=leu",
+			"descriptionFormat": "html",
+			"time": 1555248898541,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

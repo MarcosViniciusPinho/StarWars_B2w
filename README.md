@@ -14,6 +14,11 @@ Tecnologias utilizadas no projeto, foram as seguintes:<br />
 - MySql
 <br />
 
+Testes de software utilizados:
+- Teste de Unidade
+- Teste de Integration 
+<br />
+
 Para testar os end-points da API, importar a collection localizada em 
 src/test/resources/Desafio - B2W.postman_collection.json para seu postman.<br />
 

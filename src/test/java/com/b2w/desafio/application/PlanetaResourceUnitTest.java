@@ -96,7 +96,7 @@ public class PlanetaResourceUnitTest {
     }
 
     @Test
-    public void deveBuscarUmPlanetaPorId() throws Exception{
+    public void deveBuscarUmPlanetaPorIdComSucesso() throws Exception{
         Planeta planetaRetorno = new Planeta(1L, "Hackaton", "Hot", "Grass", 2);
 
         Mockito.when(this.service.findById(1L)).thenReturn(Optional.of(planetaRetorno));
